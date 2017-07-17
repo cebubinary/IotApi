@@ -76,7 +76,7 @@
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SharedContracts\IoT.SharedContracts.csproj">
+    <ProjectReference Include="..\Iot.Services.SharedContracts\IoT.SharedContracts.csproj">
       <Project>{ACB76887-27DD-4AD4-9A6D-87F103BF96E8}</Project>
       <Name>IoT.SharedContracts</Name>
     </ProjectReference>

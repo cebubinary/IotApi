@@ -1,7 +1,7 @@
-﻿using SharedContracts.SharedObjects;
-using System.Web.Http;
+﻿using System.Web.Http;
 using AccountService = Iot.Services.IoT.AccountService;
 using System.Collections.Generic;
+using SharedContracts.SharedObjects;
 
 namespace IotApi.Controllers
 {

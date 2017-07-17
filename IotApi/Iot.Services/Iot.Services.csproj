@@ -50,7 +50,7 @@
       <Project>{3B40A173-06D5-45BC-8900-4DB1AA235FF0}</Project>
       <Name>IoT.Data</Name>
     </ProjectReference>
-    <ProjectReference Include="..\SharedContracts\IoT.SharedContracts.csproj">
+    <ProjectReference Include="..\Iot.Services.SharedContracts\IoT.SharedContracts.csproj">
       <Project>{ACB76887-27DD-4AD4-9A6D-87F103BF96E8}</Project>
       <Name>IoT.SharedContracts</Name>
     </ProjectReference>
