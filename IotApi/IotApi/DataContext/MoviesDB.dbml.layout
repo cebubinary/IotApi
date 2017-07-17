@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="MoviesDB">
+  <DataContextMoniker Name="/MoviesDBDataContext" />
+  <nestedChildShapes>
+    <classShape Id="985ee07f-e34c-4eaa-ad4e-910da5a191bf" absoluteBounds="0.875, 1.125, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/MoviesDBDataContext/Person" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c2ccb6a4-6e86-429d-ace7-5ca4ccb39fd6" absoluteBounds="0.89, 1.585, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="df73dd1f-cffc-4bec-843a-da54d447ebfe" absoluteBounds="4.25, 1.375, 2, 1.3862939453125">
+      <DataClassMoniker Name="/MoviesDBDataContext/User" />
+      <nestedChildShapes>
+        <elementListCompartment Id="75cb9c54-61e6-47e5-a00d-d705c3a2479c" absoluteBounds="4.265, 1.835, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
