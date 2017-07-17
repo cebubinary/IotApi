@@ -213,24 +213,14 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MyApiController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
-    <Compile Include="DataContext\MoviesDB.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>MoviesDB.dbml</DependentUpon>
-    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Account.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Models\Person.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
-    <Compile Include="Repository\PersonRepository.cs" />
-    <Compile Include="Repository\RepositoryBase.cs" />
-    <Compile Include="Repository\UserRepository.cs" />
     <Compile Include="Results\ChallengeResult.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Utils\BasicAuthValidation.cs" />
@@ -267,14 +257,6 @@
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\CollectionModelDescription.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
-    <Content Include="DataContext\MoviesDB.dbml">
-      <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>MoviesDB.designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </Content>
-    <None Include="DataContext\MoviesDB.dbml.layout">
-      <DependentUpon>MoviesDB.dbml</DependentUpon>
-    </None>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -316,7 +298,20 @@
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\IoT.Data\IoT.Data.csproj">
+      <Project>{3B40A173-06D5-45BC-8900-4DB1AA235FF0}</Project>
+      <Name>IoT.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Iot.Services\Iot.Services.csproj">
+      <Project>{68f0bedf-5a61-4815-9983-c963416aa607}</Project>
+      <Name>Iot.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SharedContracts\IoT.SharedContracts.csproj">
+      <Project>{ACB76887-27DD-4AD4-9A6D-87F103BF96E8}</Project>
+      <Name>IoT.SharedContracts</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

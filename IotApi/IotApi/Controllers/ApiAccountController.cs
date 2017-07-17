@@ -1,44 +1,52 @@
-﻿using IotApi.DataContext;
-using IotApi.Models;
-using IotApi.Repository;
-using System.Linq;
+﻿using SharedContracts.SharedObjects;
 using System.Web.Http;
-using PersonContext = IotApi.DataContext.Person;
+using AccountService = Iot.Services.IoT.AccountService;
+using System.Collections.Generic;
 
 namespace IotApi.Controllers
 {
     [RoutePrefix("api/ApiAccount")]
     public class ApiAccountController : ApiController
     {
+        AccountService accountService;
+       // AccountService accountService;
   
         public ApiAccountController()
-        { 
+        {
+            accountService = new AccountService();
         }
 
         [Route("Login")]
         [HttpPost]
-        public bool Login([FromBody] User user)
+        public bool Login([FromBody] Account user)
         {
-            return new PersonRepository(new MoviesDBDataContext()).Login(user.Username, user.Password);
+            return accountService.Login(user.Username,user.Password);
         }
-       
+
         [Route("Register")]
         [HttpPost]
         public bool Register([FromBody] Account user)
-        {           
-            return new PersonRepository(new MoviesDBDataContext()).Resgister(user);
+        {
+            return accountService.AddNewAccount(user);
         }
         [Route("Delete")]
         [HttpPost]
-        public bool Delete([FromBody] Account user)
+        public Person Delete([FromBody] Account user)
         {
-            return new PersonRepository(new MoviesDBDataContext()).DeleteRegisteredAccount(user);
+            return accountService.Delete(user);
         }
         [Route("Update")]
         [HttpPost]
-        public bool Update([FromBody] Account user)
+        public Person Update([FromBody] Account user)
         {
-            return new PersonRepository(new MoviesDBDataContext()).UpdateRegisteredAccount(user);
+            return accountService.Update(user);
+        }
+        [Route("GetAll")]
+        [HttpGet]
+        public List<Person> GetAll()
+        {
+
+            return accountService.GetAll();
         }
     }
 }
